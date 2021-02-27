@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   
-  baseurl = "http://127.0.0.1:8000";
+  baseurl = "https://angulardeploy-test.herokuapp.com";
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   constructor(private http: HttpClient) { }
-  sendData(data1: string) : Observable<any>{
+  sendData(data1) : Observable<any>{
     const body = JSON.stringify({id: 1, x: data1});
     console.log(data1);
     return this.http.post(this.baseurl + '/outputplot/' , body,

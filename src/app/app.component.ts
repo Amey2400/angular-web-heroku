@@ -28,7 +28,16 @@ export class AppComponent {
   //to send all the data to django model blocks after simulate button pressing
   onSubmit(TestDataform1){
     this.datatosent=TestDataform1.value.data1;
+    console.log(this.datatosent)
     this.api.sendData(this.datatosent).subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    )
+    this.api.senddata_topython().subscribe(
       data => {
         console.log(data);
       },
