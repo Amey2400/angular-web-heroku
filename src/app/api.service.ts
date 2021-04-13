@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   
-  baseurl = "https://angulardeploy-test.herokuapp.com";
+  baseurl = "https://djangoazure1.azurewebsites.net";
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
   constructor(private http: HttpClient) { }
   sendData(data1) : Observable<any>{
